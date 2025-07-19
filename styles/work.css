@@ -1,115 +1,163 @@
-  .Work-header .work-title {
-    font-size: 2.5rem; 
-    font-weight: 700; 
-    color: #333; 
-    text-align: left;
-    margin-bottom: 2rem;
-    margin-left: 2.5rem;
-    position: relative;
-    text-transform: uppercase; 
-    letter-spacing: 2px; 
-  }
-  .work-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 30px;
-    background-color: #f8f9fa;
-    overflow: hidden;
-    table-layout: fixed;
-  }
-  
-  .work-table td {
-    padding: 20px;
-    vertical-align: middle;
-    word-wrap: break-word; /* Ensure text wraps */
-  }
+/* ===== Work-Life Section ===== */
+.Work-life {
+  width: 100%;
+  padding: 25px 0;
+  background-color: #fff;
+}
 
-  .work-image-cell {
-    width: 200px; 
-    height: 180px;
+.work-life-content {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.Work-header .work-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  text-align: left;
+  margin-bottom: 2rem;
+  margin-left: 2.5rem;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* ===== Table Styles ===== */
+.work-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.work-table td {
+  padding: 20px;
+  vertical-align: middle;
+}
+
+.work-image-cell {
+  width: 200px;
+}
+
+.work-image {
+  width: 330px;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.work-number-cell {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  text-align: center;
+  width: 80px;
+}
+
+.work-title-cell {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2c3e50;
+  width: 25%;
+}
+
+.work-details-cell {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  width: 35%;
+}
+
+/* ===== Desktop Styles ===== */
+@media (min-width: 768px) {
+  .mobile-view {
+    display: none;
   }
   
-  /* Larger image dimensions */
-  .work-image {
-    width: 330px;
-    height: 180px; 
-    object-fit: cover;
+  .work-table.desktop-view {
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    margin-right: 20px;
   }
   
-  .work-number-cell {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #2c3e50;
+  .work-table.desktop-view td {
+    border-right: 1px solid #e0e0e0;
+  }
+  
+  .work-table.desktop-view td:last-child {
+    border-right: none;
+  }
+}
+
+/* ===== Mobile Styles ===== */
+@media (max-width: 767px) {
+  .desktop-view {
+    display: none;
+  }
+  
+  .Work-header .work-title {
+    margin-top: 30px;
+    margin-left: 0;
     text-align: center;
-    width: 80px; /* Slightly wider for better spacing */
+    font-size: 2rem;
   }
   
-  /* Narrower title cell */
-  .work-title-cell {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #2c3e50;
-    width: 25%; /* Reduced width */
-    max-width: 250px; /* Maximum width */
+  /* Mobile table container */
+  .work-table.mobile-view {
+    width: 100%;
+    display: block;
+    overflow: hidden;
   }
   
-  .work-details-cell {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #555;
-    width: 35%; /* Adjusted width */
+  /* First row - number and title */
+  .work-table.mobile-view tr:first-child {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    border-bottom: 1px solid #e0e0e0;
   }
   
-  /* Desktop specific */
-  @media (min-width: 768px) {
-    .mobile-view { display: none; }
-    
-    .work-table.desktop-view {
-      width: calc(100% - 40px); /* Accounts for padding */
-      margin-left: 20px;
-      margin-right: 20px;
-    }
-    
-    .work-table.desktop-view td {
-      border-right: 1px solid #e0e0e0;
-    }
-    
-    .work-table.desktop-view td:last-child {
-      border-right: none;
-    }
+  /* Middle row - image */
+  .work-table.mobile-view tr:nth-child(2) td {
+    padding: 0;
   }
   
-  /* Mobile specific - improved responsiveness */
-  @media (max-width: 767px) {
-    .desktop-view { display: none; }
-    
-    .work-table.mobile-view {
-      width: 100vw;
-      margin-left: -20px; /* Counteract body padding */
-      border-radius: 0;
-    }
-    
-    .work-table.mobile-view td {
-      border-bottom: 1px solid #e0e0e0;
-      padding: 15px;
-    }
-    
-    .work-table.mobile-view tr:last-child td {
-      border-bottom: none;
-    }
-    
-    .work-image {
-      width: 100%;
-      height: 220px; /* Taller on mobile */
-      max-width: 100vw;
-    }
-    
-    .work-number-cell {
-      width: 80px;
-    }
-    
-    .work-title-cell {
-      width: calc(100% - 80px);
-      max-width: none;
-    }
+  /* Last row - details */
+  .work-table.mobile-view tr:last-child td {
+    padding: 15px;
   }
+  
+  /* Number cell */
+  .work-table.mobile-view .work-number-cell {
+    font-size: 1.8rem;
+    width: 50px;
+    padding: 0;
+    margin-right: 10px;
+  }
+  
+  /* Title cell */
+  .work-table.mobile-view .work-title-cell {
+    font-size: 1.2rem;
+    padding: 0;
+    flex: 1;
+  }
+  
+  /* Image styling */
+  .work-table.mobile-view .work-image {
+    width: 100%;
+    height: auto;
+    max-height: 220px;
+  }
+  
+  /* Details text */
+  .work-table.mobile-view .work-details-cell {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  /* Spacing between multiple tables */
+  .work-table.mobile-view + .work-table.mobile-view {
+    margin-top: 20px;
+  }
+}
