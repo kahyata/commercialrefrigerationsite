@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/mobile.css" media="only screen and (max-width: 768px)" />
-    <link rel="stylesheet" href="../styles/desktop.css" media="only screen and (min-width: 769px)" />
-    <link rel="stylesheet" href="../styles/work.css">
-    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="styles/mobile.css" media="only screen and (max-width: 768px)" />
+    <link rel="stylesheet" href="styles/desktop.css" media="only screen and (min-width: 769px)" />
+    <link rel="stylesheet" href="styles/work.css">
+    <link rel="stylesheet" href="styles/footer.css" />
     <title>Commercial Refrigeration & Services Zambia</title>
 </head>
 <body>
@@ -177,13 +177,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const targetElement = document.querySelector(targetId);
         
         if (targetElement) {
-          // Wait for menu animation to complete (500ms matches your CSS transition)
           setTimeout(() => {
             targetElement.scrollIntoView({
               behavior: 'smooth'
             });
             
-            // Update URL without page jump
             if (history.pushState) {
               history.pushState(null, null, targetId);
             } else {
@@ -192,7 +190,6 @@ document.addEventListener('DOMContentLoaded', function() {
           }, 500);
         }
       }
-      // Regular links will behave normally after closing menu
     });
   });
 });
