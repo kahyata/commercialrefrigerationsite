@@ -22,7 +22,7 @@
   background-color: #000;
 }
 
-/* Video Background - Scroll Safe */
+/* Video Background - Fixed on Mobile */
 .hero-video {
   position: absolute;
   top: 50%;
@@ -46,7 +46,6 @@
   width: 100%;
   max-width: 900px;
   padding: 30px 20px;
-  /* Prevent content overflow */
   overflow: visible;
 }
 
@@ -104,20 +103,35 @@
 }
 
 @media (max-width: 768px) {
-  /* REMOVED: html, body height lock and overflow hidden */
-  /* This now allows normal scrolling on mobile devices */
-  
   .section-hero {
     width: 96%;
     min-height: 90vh;
     margin: 0 auto;
     border-radius: 0;
-    /* Keep internal scrolling if needed */
     overflow-y: auto;
+  }
+  
+  /* Fixed video background for mobile */
+  .hero-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    pointer-events: none;
   }
   
   .hero-content {
     padding: 20px 15px;
+    position: relative;
+    z-index: 2;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    max-height: 100vh;
   }
   
   .rich-text .text-appear-line p {
@@ -134,9 +148,10 @@
   }
   
   .hero-video {
-    /* More aggressive mobile scaling */
-    min-width: 150%;
+    min-width: 100%;
     min-height: 100%;
+    width: auto;
+    height: auto;
   }
   
   .section-caption {
