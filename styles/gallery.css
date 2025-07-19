@@ -1,4 +1,4 @@
-/* Gallery section */
+/* ===== Gallery Section ===== */
 .Gallery-section {
     padding: 4rem 0;
     background: #f8f9fa;
@@ -103,6 +103,8 @@
     text-decoration: none;
     transition: all 0.2s ease;
     margin-top: 1rem;
+    text-align: left;
+    justify-content: flex-start;
 }
 
 .contact-btn svg {
@@ -110,13 +112,15 @@
     transition: transform 0.2s;
 }
 
-.contact-button:hover, .contact-button:focus {
+.contact-btn:hover, 
+.contact-btn:focus {
     background: linear-gradient(90deg, #222c36 0%, #23272f 100%);
     box-shadow: 0 4px 16px 0 rgba(30,144,255,0.16);
     transform: translateY(-2px) scale(1.03);
 }
 
-.contact-button:hover svg, .contact-button:focus svg {
+.contact-btn:hover svg, 
+.contact-btn:focus svg {
     transform: translateX(4px) scale(1.1);
 }
 
@@ -171,11 +175,11 @@
     }
 }
 
-/* Responsive adjustments */
+/* ===== Responsive Adjustments ===== */
 @media (max-width: 1100px) {
     .Media-content {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start; /* Changed from center to flex-start */
         gap: 1.5rem;
     }
 
@@ -187,10 +191,11 @@
     .Media-text-container {
         width: 100%;
         max-width: 800px;
+        justify-content: flex-start; /* Changed from center to flex-start */
     }
 
     .Media-text {
-        text-align: center;
+        text-align: left; /* Changed from center to left */
         padding: 0 1rem;
     }
 
@@ -201,7 +206,6 @@
 }
 
 @media (max-width: 768px) {
-
     .Gallery-section {
         padding: 2rem 0;
     }
@@ -218,11 +222,17 @@
 
     .Media-text p {
         font-size: 1.8rem;
+        text-align: left; /* Ensure left alignment */
     }
 
     .Media-text {
         font-size: 1rem;
         padding: 0;
+    }
+
+    .contact-btn {
+        margin-left: 0; /* Remove any left margin */
+        align-self: flex-start; /* Force left alignment */
     }
 
     .Clientele-logo {
@@ -236,7 +246,7 @@
     .Gallery-header h2,
     .Clientele-header h2 {
         font-size: 1.5rem;
-        text-align: center;
+        text-align: left; /* Changed from center to left */
     }
 
     .Media-container {
@@ -245,13 +255,14 @@
 
     .Media-text p {
         font-size: 1.5rem;
-        text-align: center;
+        text-align: left; /* Changed from center to left */
         margin: 10px 0;
     }
 
     .contact-btn {
         font-size: 1rem;
         padding: 0.6em 1.5em;
+        margin-left: 0; /* Ensure no left margin */
     }
 
     .Clientele-logo {
