@@ -136,7 +136,7 @@
   .hero-video {
     /* More aggressive mobile scaling */
     min-width: 150%;
-    min-height: 150%;
+    min-height: 100%;
   }
   
   .section-caption {
