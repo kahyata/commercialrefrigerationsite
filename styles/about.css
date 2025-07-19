@@ -1,0 +1,76 @@
+/* About section styles */
+.About-section {
+    background-color: #f8f9fa;
+    padding: 4rem 0;
+}
+
+.About-header {
+    text-align: left;
+    margin-bottom: 3rem;
+}
+
+.About-header p:first-child {
+    font-size: 1.2rem;
+    color: #1e90ff;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.About-header p:last-child {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #23272f;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.About-content {
+    width: 100%;
+    text-align: left;
+}
+
+.About-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444b5a;
+    margin-bottom: 1.5rem;
+}
+
+.About-content .hero-button {
+    margin-top: 2rem;
+    display: inline-flex;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    
+    .About-header p:last-child {
+        font-size: 2rem;
+    }
+    
+    .About-content {
+        padding: 0 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .About-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    }
+    .About-section {
+        padding: 3rem 0;
+    }
+    
+    .About-header p:first-child {
+        font-size: 1rem;
+    }
+    
+    .About-header p:last-child {
+        font-size: 1.75rem;
+    }
+    
+    .About-content p {
+        font-size: 1rem;
+    }
+}

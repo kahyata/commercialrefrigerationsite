@@ -1,0 +1,210 @@
+/* ===== SOLUTIONS SECTION ===== */
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Section Container */
+.Solution-section {
+  width: 100%;
+  padding: 4rem 0;
+  background-color: #f8f9fa; /* Light background for the section */
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px; /* Added padding to push content inward */
+}
+
+/* Section Header */
+.solutions-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 0 2rem; /* Added padding for better spacing */
+}
+
+.solutions-header .solutions-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #23272f;
+  text-align: center;
+  margin: 0 auto 2rem; /* Centered with bottom margin */
+  line-height: 1.2;
+  max-width: 800px; /* Prevent title from stretching too wide */
+  position: relative;
+  padding-left: 2rem; /* Push title right on desktop */
+  padding-right: 2rem;
+}
+
+/* Solutions List */
+.Solutions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 2rem; /* Adjusted padding */
+  align-items: center;
+  width: 100%;
+}
+
+/* Solution Rows */
+.solutions-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Solution Cards */
+.solution-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px 0 rgba(34, 34, 34, 0.08);
+  border: 1.5px solid #e0e4ea;
+  padding: 2rem 1.5rem;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.solution-card:hover {
+  box-shadow: 0 6px 32px 0 rgba(30, 144, 255, 0.16);
+  transform: translateY(-4px);
+  border-color: #1e90ff;
+}
+
+/* Card Content */
+.solutions-icon {
+  margin-bottom: 1.2rem;
+}
+
+.solution-card .solutions-icon svg {
+  fill: #58A0C8;
+}
+
+.solution-card:nth-child(3) .cls-1 {
+    stroke: #1e90ff !important; /* Use your preferred blue color */
+}
+.solution-card .solutions-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #23272f;
+  margin-bottom: 0.8rem;
+  line-height: 1.3;
+}
+
+.solutions-text {
+  font-size: 1rem;
+  color: #444b5a;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 30px;
+  }
+  
+  .solutions-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .solutions-header .solutions-title {
+    font-size: 2.2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  
+  .solutions-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .solution-card {
+    min-height: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .solutions-header .solutions-title {
+    text-align: left;
+    padding: 0 1rem;
+    margin-top: 2rem;
+  }
+  .Solution-section {
+    padding: 3rem 0;
+  }
+  
+  .container {
+    padding: 0 20px;
+  }
+  
+  .solutions-header {
+    margin-bottom: 2rem;
+  }
+  
+  .solutions-header .solutions-title {
+    font-size: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .Solutions-list {
+    padding: 0 1rem;
+  }
+  
+  .solution-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .solutions-row {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+  
+  .solutions-header .solutions-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .solution-card {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .Solution-section {
+    padding: 2.5rem 0;
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+  
+  .solutions-header .solutions-title {
+    font-size: 1.6rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  .solution-card .solutions-title {
+    font-size: 1.15rem;
+  }
+  
+  .solutions-text {
+    font-size: 0.95rem;
+  }
+}

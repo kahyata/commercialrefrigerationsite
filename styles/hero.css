@@ -1,0 +1,149 @@
+/* ===== HERO SECTION - SCROLL FIXED ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Hero Container - Scroll Safe */
+.section-hero {
+  position: relative;
+  width: 92%;
+  max-width: 1300px;
+  min-height: 85vh;
+  max-height: 100vh;
+  margin: 1vh auto;
+  padding: 20px;
+  border-radius: 25px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+
+/* Video Background - Scroll Safe */
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+/* Content Container */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  width: 100%;
+  max-width: 900px;
+  padding: 30px 20px;
+  /* Prevent content overflow */
+  overflow: visible;
+}
+
+/* Text Elements */
+.section-caption {
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.section-message {
+  line-height: 1.3;
+  margin-bottom: 30px;
+}
+
+.rich-text .text-appear-line {
+  margin-bottom: 12px;
+}
+
+.rich-text .text-appear-line p {
+  font-weight: 700;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Button Styles */
+.contact-btton {
+  margin-top: 20px;
+}
+
+.contact-btton a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 24px;
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* ===== MOBILE OPTIMIZATIONS ===== */
+@media (max-width: 992px) {
+  .section-hero {
+    width: 94%;
+    min-height: 80vh;
+    margin: 1vh auto;
+  }
+}
+
+@media (max-width: 768px) {
+  /* REMOVED: html, body height lock and overflow hidden */
+  /* This now allows normal scrolling on mobile devices */
+  
+  .section-hero {
+    width: 96%;
+    min-height: 90vh;
+    margin: 0 auto;
+    border-radius: 0;
+    /* Keep internal scrolling if needed */
+    overflow-y: auto;
+  }
+  
+  .hero-content {
+    padding: 20px 15px;
+  }
+  
+  .rich-text .text-appear-line p {
+    font-size: clamp(1.5rem, 5vw, 1.8rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .section-hero {
+    width: 100%;
+    min-height: 100vh;
+    border-radius: 0;
+    padding: 15px 10px;
+  }
+  
+  .hero-video {
+    /* More aggressive mobile scaling */
+    min-width: 150%;
+    min-height: 150%;
+  }
+  
+  .section-caption {
+    font-size: 0.8rem;
+  }
+  
+  .contact-button a {
+    padding: 12px 20px;
+  }
+}

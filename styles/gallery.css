@@ -1,0 +1,266 @@
+/* Gallery section */
+.Gallery-section {
+    padding: 4rem 0;
+    background: #f8f9fa;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Gallery header */
+.Gallery-header {
+    text-align: left;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+}
+
+.Gallery-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #23272f;
+    margin: 0;
+}
+
+/* Gallery container */
+.container-gallery {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+/* Media content (images + text) */
+.Media-content {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    width: 100%;
+}
+
+/* Media container (scrolling images) */
+.Media-container {
+    flex: 2;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    display: flex;
+    border-radius: 8px;
+}
+
+.Media-container .Media-image {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+.Media-container .Media-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.Media-text p {
+    font-size: 2.2rem;
+    color: #444b5a;
+    text-align: left;
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+/* Media text container */
+.Media-text-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Media-text {
+    font-size: 1.2rem;
+    color: #444b5a;
+    text-align: left;
+    line-height: 1.5;
+    padding: 1rem;
+}
+
+/* Contact button styles */
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.75em 2em;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(90deg, #23272f 0%, #222c36 100%);
+    border: none;
+    border-radius: 32px;
+    box-shadow: 0 2px 8px 0 rgba(30,144,255,0.08);
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    margin-top: 1rem;
+}
+
+.contact-btn svg {
+    margin-left: 0.5em;
+    transition: transform 0.2s;
+}
+
+.contact-button:hover, .contact-button:focus {
+    background: linear-gradient(90deg, #222c36 0%, #23272f 100%);
+    box-shadow: 0 4px 16px 0 rgba(30,144,255,0.16);
+    transform: translateY(-2px) scale(1.03);
+}
+
+.contact-button:hover svg, .contact-button:focus svg {
+    transform: translateX(4px) scale(1.1);
+}
+
+/* Clientele section */
+.Clientele-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding: 2rem 0;
+}
+
+.Clientele-header {
+    padding: 0 1rem;
+}
+
+.Clientele-header h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.Clientele-logos {
+    display: flex;
+    animation: scrollLogos 25s linear infinite;
+    width: max-content;
+}
+
+.Clientele-logo {
+    flex: 0 0 auto;
+    width: 150px;
+    height: 80px;
+    margin: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Clientele-logo img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Animation */
+@keyframes scrollLogos {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1100px) {
+    .Media-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .Media-container {
+        max-width: 100%;
+        height: 400px;
+    }
+
+    .Media-text-container {
+        width: 100%;
+        max-width: 800px;
+    }
+
+    .Media-text {
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .Clientele-logo {
+        width: 120px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .Gallery-section {
+        padding: 2rem 0;
+    }
+
+    .Gallery-header h2,
+    .Clientele-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .Media-container {
+        height: 350px;
+        border-radius: 0;
+    }
+
+    .Media-text p {
+        font-size: 1.8rem;
+    }
+
+    .Media-text {
+        font-size: 1rem;
+        padding: 0;
+    }
+
+    .Clientele-logo {
+        width: 100px;
+        height: 50px;
+        margin: 0 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .Gallery-header h2,
+    .Clientele-header h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .Media-container {
+        height: 250px;
+    }
+
+    .Media-text p {
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .contact-btn {
+        font-size: 1rem;
+        padding: 0.6em 1.5em;
+    }
+
+    .Clientele-logo {
+        width: 80px;
+        height: 40px;
+        margin: 0 0.5rem;
+    }
+
+    .Clientele-container {
+        padding: 1.5rem 0;
+    }
+}
