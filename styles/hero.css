@@ -10,15 +10,36 @@
   max-width: 1300px;
   height: 85vh;
   min-height: 85vh;
-  max-height: 100vh; 
+  max-height: 100vh;
   margin: 1vh auto;
   padding: 20px;
   border-radius: 25px;
-  overflow: hidden; 
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #000;
+  
+  /* Gradient Background Animation */
+  background: linear-gradient(-45deg, 
+    #799EFF,       /* Base color */
+    #9DB7FF,       /* Lighter variation */
+    #C5D8FF,       /* Even lighter */
+    #799EFF);      /* Back to base */
+  background-size: 400% 400%;
+  animation: gradientFlow 12s ease infinite;
+}
+
+/* Animation Keyframes */
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .hero-video {
@@ -28,7 +49,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.6;
+  opacity: 0.6; 
+  mix-blend-mode: overlay;
   z-index: 1;
 }
 
